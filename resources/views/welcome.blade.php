@@ -46,6 +46,14 @@
 
             .title {
                 font-size: 84px;
+                text-decoration:none !important;
+            }
+            .title a{
+                font-size: 84px;
+                text-decoration:none !important;
+            }
+            .title a:hover{
+                color:red;
             }
 
             .links > a {
@@ -81,7 +89,8 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Bryan James Bassett
+                    <a href="mailto:admin@bjbassett.org">Bryan James Bassett</a>
+
                 </div>
 
             </div>
