@@ -21,7 +21,6 @@ class ShortLinkController extends Controller
     public function index()
     {
         $shortLinks = ShortLink::latest()->get();
-
         return view('shortenLink', compact('shortLinks'));
     }
 
@@ -36,18 +35,13 @@ class ShortLinkController extends Controller
             'link' => 'required|url',
         ]);
 
-        $input['link'] = $request->link;
-        if(empty($request->slug)){
-            $input['slug'] = ShortLinkController::quickRandomx();
-        }else{
-            $input['slug'] = $request->slug;
-        }
-
-
-        ShortLink::create($input);
+        ShortLink::create([
+            'link' => $request->link,
+            'slug' => $request->has('slug') ? $request->slug : ShortLinkController::quickRandomx()
+        ]);
 
         return redirect('generate-shorten-link')
-            ->with('success', 'Shorten Link Generated Successfully!');
+            ->with('success', 'Short Link Generated Successfully!');
     }
 
     /**
@@ -55,10 +49,8 @@ class ShortLinkController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function shortenLink($slug)
+    public function shortenLink(ShortLink $slug)
     {
-        $find = ShortLink::where('slug', $slug)->first();
-
-        return redirect($find->link);
+        return redirect($slug->link);
     }
 }

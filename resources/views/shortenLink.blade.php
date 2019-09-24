@@ -12,7 +12,7 @@
                         <input type="text" name="link" class="form-control" placeholder="Enter URL" aria-label="URL" >
                         <input type="text" name="slug" class="form-control" placeholder="Enter Slug" aria-label="Slug" >
                         <div class="input-group-append">
-                            <button class="btn btn-success" type="submit">Generate Shorten Link</button>
+                            <button class="btn btn-success" type="submit">Generate Link</button>
                         </div>
                     </div>
                 </form>
@@ -25,12 +25,12 @@
                     </div>
                 @endif
 
-                <table class="table table-bordered table-sm">
+                <table class="table table-bordered  table-responsive table-sm">
                     <thead>
                     <tr>
                         <th>ID</th>
                         <th>Short Link</th>
-                        <th>Link</th>
+                        <th width="100%">Link</th>
                     </tr>
                     </thead>
                     <tbody>

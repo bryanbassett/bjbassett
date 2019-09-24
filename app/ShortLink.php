@@ -14,4 +14,7 @@ class ShortLink extends Model
     protected $fillable = [
         'slug', 'link'
     ];
+    public function getRouteKeyName(){
+        return 'slug';
+    }
 }

@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'welcome');
+
 
 Route::group(['middleware' => ['auth']], function($router) {
     Route::get('generate-shorten-link', 'ShortLinkController@index');
