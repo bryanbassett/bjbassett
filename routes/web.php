@@ -19,8 +19,8 @@ Route::group(['middleware' => ['auth']], function($router) {
 
     Route::get('addcategory', 'categories@index');
     Route::post('addcategory', 'categories@store')->name('add.category.post');
-    Route::get('editcategory/{id}', 'categories@edit');
-    Route::patch('editcategory/{id}', 'categories@update')->name('update.category.post');
+    Route::get('editcategory/{cat}', 'categories@edit');
+    Route::patch('editcategory/{cat}', 'categories@update')->name('update.category.post');
 
     Route::post('generate-shorten-link', 'ShortLinkController@store')->name('generate.shorten.link.post');
 

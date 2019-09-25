@@ -38,7 +38,7 @@ class categories extends Controller
         ]);
 
         return redirect('addcategory')
-            ->with('success', 'Short Link Generated Successfully!');
+            ->with('success', 'Category Created Successfully!');
     }
 
     /**
@@ -58,10 +58,9 @@ class categories extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Cats $cat)
     {
-        $cat = Cats::find($id);
-        return view('editCat')->with(compact('cat'));
+        return view('editCat', compact('cat'));
     }
 
     /**
@@ -71,23 +70,15 @@ class categories extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Cats $cat)
     {
-
-        $request->validate([
+       $attributes = $request->validate([
             'name' => 'required',
             'section' => 'required',
             'weight' => 'required',
         ]);
 
-
-        $cat = Cats::find($request->id);
-
-        $cat->update([
-            'name' => $request->name,
-            'section' => $request->section,
-            'weight' => $request->weight,
-        ]);
+        $cat->update($attributes);
 
         return redirect('addcategory')
             ->with('success', 'Category Edited Successfully');

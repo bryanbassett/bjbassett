@@ -14,7 +14,5 @@ class Cats extends Model
     protected $fillable = [
         'id','name', 'section','weight'
     ];
-    public function getRouteKey(){
-      return 'id';
-    }
+
 }

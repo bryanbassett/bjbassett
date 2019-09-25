@@ -15,9 +15,9 @@ class ResumeCategory extends Migration
     {
         Schema::create('cats', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('Name');
-            $table->string('Section');
-            $table->integer('Weight');
+            $table->string('name');
+            $table->string('section');
+            $table->integer('weight');
             $table->timestamps();
         });
     }
