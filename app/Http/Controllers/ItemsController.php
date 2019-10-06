@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Cats;
-class categories extends Controller
+use App\Field;
+use App\Item;
+use Illuminate\Http\Request;
+
+class ItemsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +16,11 @@ class categories extends Controller
      */
     public function index()
     {
+        $fields = Field::all();
         $cats = Cats::all();
-        return view('addCat', compact('cats'));
+
+
+        return view('addItem', compact('fields'),compact('cats'));
     }
 
     /**
@@ -26,31 +32,27 @@ class categories extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'section' => 'required',
             'weight' => 'required',
+            'name' => 'required',
+            'cat_id'=> 'required',
         ]);
-
-        Cats::create([
-            'name' => $request->name,
-            'section' => $request->section,
+        $fullContent = $request->all();
+        unset($fullContent['_token']);
+        unset($fullContent['cat_id']);
+        unset($fullContent['name']);
+        unset($fullContent['weight']);
+        $fullContent = json_encode($fullContent);
+        Item::create([
             'weight' => $request->weight,
+            'name' => $request->name,
+            'cat_id' => $request->cat_id,
+            'fullContent' => $fullContent,
         ]);
 
-        return redirect('addcategory')
-            ->with('success', 'Category Created Successfully!');
+        return redirect('additem')
+            ->with('success', 'Item Created Successfully!');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
@@ -58,9 +60,9 @@ class categories extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Cats $cat)
+    public function edit(Item $item)
     {
-        return view('editCat', compact('cat'));
+        return view('editItem', [compact('items')]);
     }
 
     /**
@@ -70,18 +72,16 @@ class categories extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Cats $cat)
+    public function update(Request $request,Item $item)
     {
-       $attributes = $request->validate([
-            'name' => 'required',
-            'section' => 'required',
-            'weight' => 'required',
+        $attributes = $request->validate([
+            'type' => 'required',
         ]);
 
-        $cat->update($attributes);
+        $item->update($attributes);
 
-        return redirect('addcategory')
-            ->with('success', 'Category Edited Successfully');
+        return redirect('additem')
+            ->with('success', 'ItemEdited Successfully');
     }
 
     /**

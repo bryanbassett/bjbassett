@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\ShortLink;
+use function Sodium\increment;
 
 class ShortLinkController extends Controller
 {
@@ -21,7 +22,8 @@ class ShortLinkController extends Controller
     public function index()
     {
         $shortLinks = ShortLink::latest()->get();
-        return view('shortenLink', compact('shortLinks'));
+        $total = ShortLink::totalClicks();
+        return view('shortenLink', compact('shortLinks','total'));
     }
 
     /**
@@ -49,8 +51,11 @@ class ShortLinkController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function shortenLink(ShortLink $slug)
+    public function shortenLink(ShortLink $shortLink)
     {
-        return redirect($slug->link);
+
+        $shortLink->clicks++;
+        $shortLink->save();
+        return redirect($shortLink->link);
     }
 }

@@ -11,23 +11,30 @@
 |
 */
 
-Route::view('/', 'welcome');
-
+Route::get('/', 'WelcomeController@index');
 
 Route::group(['middleware' => ['auth']], function($router) {
     Route::get('generate-shorten-link', 'ShortLinkController@index');
 
-    Route::get('addcategory', 'categories@index');
-    Route::post('addcategory', 'categories@store')->name('add.category.post');
-    Route::get('editcategory/{cat}', 'categories@edit');
-    Route::patch('editcategory/{cat}', 'categories@update')->name('update.category.post');
+    Route::get('addcategory', 'CategoriesController@index');
+    Route::post('addcategory', 'CategoriesController@store')->name('add.category.post');
+    Route::get('editcategory/{cat}', 'CategoriesController@edit');
+    Route::patch('editcategory/{cat}', 'CategoriesController@update')->name('update.category.post');
+
+    Route::get('addfield', 'FieldController@index');
+    Route::post('addfield', 'FieldController@store')->name('add.field.post');
 
     Route::post('generate-shorten-link', 'ShortLinkController@store')->name('generate.shorten.link.post');
 
-    Route::get('/s/{slug}', 'ShortLinkController@shortenLink')->name('shorten.link');
+    Route::get('additem', 'ItemsController@index');
+    Route::post('additem', 'ItemsController@store')->name('add.item.post');
+    Route::get('field/get_by_category', 'FieldController@get_by_category')->name('field.get_by_category');
+
+    //changing settings
+    Route::get('setting/change', 'SettingsController@toggle_setting')->name('settings.toggle_setting');
 
 });
 
-
 Auth::routes([ 'register' => false ]);
+Route::get('/s/{shortLink}', 'ShortLinkController@shortenLink')->name('shorten.link');
 Route::get('/home', 'HomeController@index')->name('home');

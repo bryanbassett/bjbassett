@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class ResumeCategory extends Migration
+class AddColumns extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class ResumeCategory extends Migration
      */
     public function up()
     {
-        Schema::create('cats', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('section');
+        Schema::table('fields', function ($table) {
             $table->integer('weight');
-            $table->string('parent_id')->nullable();
-            $table->timestamps();
+        });
+        Schema::table('items', function ($table) {
+            $table->integer('weight');
         });
     }
 
@@ -30,6 +28,6 @@ class ResumeCategory extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cats');
+        //
     }
 }

@@ -10686,3 +10686,11 @@ body {
   }
 }
 
+div.field-group {
+  margin-bottom: 5px;
+}
+
+h3.field-group {
+  border-bottom: 1px solid black;
+}
+

@@ -24,12 +24,18 @@
                         <p>{{ Session::get('success') }}</p>
                     </div>
                 @endif
-
-                <table class="table table-bordered  table-responsive table-sm">
-                    <thead>
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>Total Clicks: {{ $total }}</strong>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <table class="table table-bordered">
+                        <thead class="thead-light">
                     <tr>
                         <th>ID</th>
                         <th>Short Link</th>
+                        <th>Clicks</th>
                         <th width="100%">Link</th>
                     </tr>
                     </thead>
@@ -38,11 +44,18 @@
                         <tr>
                             <td>{{ $row->id }}</td>
                             <td><a href="{{ route('shorten.link', $row->slug) }}" target="_blank">{{ route('shorten.link', $row->slug) }}</a></td>
+                            <td>{{ $row->clicks }}</td>
                             <td>{{ $row->link }}</td>
                         </tr>
                     @endforeach
+
                     </tbody>
+
+
+
                 </table>
+
+
             </div>
         </div>
 

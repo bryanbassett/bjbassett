@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\ShortLink;
+use App\Settings;
 class HomeController extends Controller
 {
     /**
@@ -23,6 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        //$ShortLink = new ShortLink;
+        $totalClicks = ShortLink::totalClicks();
+        $settings = Settings::all();
+        return view('home', compact('totalClicks','settings'));
     }
 }

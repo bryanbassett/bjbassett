@@ -17,4 +17,7 @@ class ShortLink extends Model
     public function getRouteKeyName(){
         return 'slug';
     }
+    public static function totalClicks(){
+        return ShortLink::sum('clicks');
+    }
 }

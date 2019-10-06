@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-
-class ResumeCategory extends Migration
+use App\Settings;
+class CreateSettingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class ResumeCategory extends Migration
      */
     public function up()
     {
-        Schema::create('cats', function (Blueprint $table) {
+        Schema::create('settings', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('section');
-            $table->integer('weight');
-            $table->string('parent_id')->nullable();
+            $table->boolean('enabled');
             $table->timestamps();
         });
+
+        Settings::create(['id'=>1,'name'=>'show','enabled'=>0]);
     }
 
     /**
@@ -30,6 +30,6 @@ class ResumeCategory extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cats');
+        Schema::dropIfExists('settings');
     }
 }

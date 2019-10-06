@@ -11,9 +11,14 @@
                     {{ method_field('PATCH') }}
                     <div class="input-group mb-3">
                         <input type="hidden" name="id" class="form-control" placeholder="ID" aria-label="id" value=" {{$cat->id}}" >
-                        <input type="text" name="name" class="form-control" placeholder="Category Name" aria-label="name" value=" {{$cat->Name}}" >
-                        <input type="text" name="section" class="form-control" placeholder="Section" aria-label="section" value="{{$cat->Section}}" >
-                        <input type="text" name="weight" class="form-control" placeholder="Weight" aria-label="weight" value="{{$cat->Weight}}">
+                        <input type="text" name="name" class="form-control" placeholder="Category Name" aria-label="name" value=" {{$cat->name}}" >
+                        <input type="text" name="section" class="form-control" placeholder="Section" aria-label="section" value="{{$cat->section}}" >
+                        <input type="text" name="weight" class="form-control" placeholder="Weight" aria-label="weight" value="{{$cat->weight}}">
+                        <select>
+
+                                <option value="{{ $cat->id }}">{{ $cat->name }}</option>
+
+                        </select>
                         <div class="input-group-append">
                             <button class="btn btn-success" type="submit">Save Category</button>
                         </div>
