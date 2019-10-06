@@ -23,7 +23,12 @@
             @endif
         </div>
     </div>
-    @if( ($Setting->find(1))->enabled == 1)
+    @if( ($Setting->find(1))->enabled == 0 && Auth::check())
+        <div class="alert alert-primary" role="alert">
+            FYI: The following content is currently being hidden.
+        </div>
+        @endif
+    @if( ($Setting->find(1))->enabled == 1 || Auth::check())
         <div class="container">
             <div class="row first-row">
                 <div class="col-sm sec-1">
