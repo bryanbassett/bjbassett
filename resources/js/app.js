@@ -5,6 +5,7 @@
  */
 
 require('./bootstrap');
+require('./mailgo');
 
 window.Vue = require('vue');
 

@@ -8,7 +8,7 @@
 
 
             <h1 class="display-1 text-center">
-                <a href="mailto:admin@bjbassett.org">Bryan James Bassett</a>
+                <a href="#mailgo" data-address="admin" data-domain="bjbassett.org">Bryan James Bassett</a>
             </h1>
             <?php if( ($Setting->find(1))->enabled == 0): ?>
             <p class="lead text-center">
@@ -23,7 +23,7 @@
     </div>
     <?php if( ($Setting->find(1))->enabled == 0 && Auth::check()): ?>
         <div class="alert alert-primary" role="alert">
-            FYI: The following content is currently being hidden. 
+            FYI: The following content is currently being hidden.
         </div>
         <?php endif; ?>
     <?php if( ($Setting->find(1))->enabled == 1 || Auth::check()): ?>

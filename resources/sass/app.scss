@@ -6,6 +6,7 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
 body {
     overflow-x: hidden;
 }
@@ -134,3 +135,6 @@ h3.field-group{
     }
 
 }
+
+
+@import 'mailgo';

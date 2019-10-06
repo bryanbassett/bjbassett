@@ -10,7 +10,7 @@
 
 
             <h1 class="display-1 text-center">
-                <a href="mailto:admin@bjbassett.org">Bryan James Bassett</a>
+                <a href="#mailgo" data-address="admin" data-domain="bjbassett.org">Bryan James Bassett</a>
             </h1>
             @if( ($Setting->find(1))->enabled == 0)
             <p class="lead text-center">
