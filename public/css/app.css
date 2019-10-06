@@ -10748,3 +10748,18 @@ h3.field-group {
   font-weight: bold;
 }
 
+.sec-2 p.To.Date {
+  float: left;
+  margin-bottom: 0;
+}
+
+.sec-2 p.To.Date:before {
+  content: " - ";
+  margin-left: 5px;
+  margin-bottom: 0;
+}
+
+.sec-2 p.To.Date:empty:before {
+  display: none !important;
+}
+

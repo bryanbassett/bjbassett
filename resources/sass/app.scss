@@ -118,5 +118,19 @@ h3.field-group{
         margin-top:0;
         font-weight: bold;
     }
+    p.To.Date {
+        float: left;
+        margin-bottom: 0;
+
+    }
+
+    p.To.Date:before {
+        content: " - ";
+        margin-left: 5px;
+        margin-bottom: 0;
+    }
+    p.To.Date:empty:before{
+        display:none !important;
+    }
 
 }
