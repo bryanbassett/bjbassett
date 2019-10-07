@@ -26,7 +26,8 @@ class Item extends Model
         }elseif($type == 'text' || $type == 'textarea'){
             return '<p class=" '.$fc->makeClass($name).'">'.$item.'</p>';
         }elseif($type == 'date'){
-            return '<p class=" '.$fc->makeClass($name).'">'.date("n/Y", strtotime($item)).'</p>';
+            $item = trim(preg_replace('/\s+/', ' ', $item));
+            return '<p class=" '.$fc->makeClass($name).'">'.($item!='' ? date("n/Y", strtotime($item)) : '').'</p>';
         }
 
     }
