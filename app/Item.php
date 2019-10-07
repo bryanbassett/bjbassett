@@ -26,7 +26,7 @@ class Item extends Model
         }elseif($type == 'text' || $type == 'textarea'){
             return '<p class=" '.$fc->makeClass($name).'">'.$item.'</p>';
         }elseif($type == 'date'){
-            return '<p class=" '.$fc->makeClass($name).'">'.$item.'</p>';
+            return '<p class=" '.$fc->makeClass($name).'">'.date("n/Y", strtotime($item)).'</p>';
         }
 
     }
