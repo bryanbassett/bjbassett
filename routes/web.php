@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', 'WelcomeController@index')->name('view.resume');
+Route::get('/pdf', 'WelcomeController@makePDF')->name('make.pdf');
 
 Route::group(['middleware' => ['auth']], function($router) {
     Route::get('generate-shorten-link', 'ShortLinkController@index');

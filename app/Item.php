@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Http\Controllers\FieldController;
 use Illuminate\Database\Eloquent\Model;
 
 class Item extends Model
@@ -17,14 +18,15 @@ class Item extends Model
     }
 
     public function figureIt($lookup,$item){
+        $fc = new FieldController;
         $type = (explode('///',$lookup ))[0];
         $name = str_replace('_',' ',(explode('///',$lookup ))[1]);
         if($type == 'link'){
-             return '<a href="/s/'.ShortLink::find($item)->slug.'">'.$name.'</a>';
+             return '<a class=" '.$fc->makeClass($name).'" href="/s/'.ShortLink::find($item)->slug.'">'.$name.'</a>';
         }elseif($type == 'text' || $type == 'textarea'){
-            return '<p class="'.$name.'">'.$item.'</p>';
+            return '<p class=" '.$fc->makeClass($name).'">'.$item.'</p>';
         }elseif($type == 'date'){
-            return '<p class="'.$name.'">'.$item.'</p>';
+            return '<p class=" '.$fc->makeClass($name).'">'.$item.'</p>';
         }
 
     }

@@ -12,4 +12,12 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');
+   .sass('resources/sass/app.scss', 'public/css').options({
+    postCss: [
+        require('autoprefixer')({
+            grid: "autoplace",
+            flexbox: "no-2009",
+        }),
+        require('postcss-flexbugs-fixes')
+    ]
+});

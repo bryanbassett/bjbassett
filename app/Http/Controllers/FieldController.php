@@ -80,6 +80,10 @@ class FieldController extends Controller
         return redirect('addfield')
             ->with('success', 'Field Edited Successfully');
     }
+    public function makeClass($in){
+        $out = preg_replace('/[^\p{L}\p{N}\s]/u', '', strtolower(str_replace(' ', '_', $in)));
+        return $out;
+    }
     public function get_by_category(Request $request)
     {
 
@@ -98,18 +102,18 @@ class FieldController extends Controller
                 foreach ($fields as $field) {
                     $html .= '<div class="form-group">';
                     if($field->type == 'text'){
-                        $html .= '<input name="text///'.$field->name.'" class="form-control text" type="text" placeholder="Text ('.$field->name.')">';
+                        $html .= '<input name="text///'.$field->name.'" class="form-control text '.FieldController::makeClass($field->name).'" type="text" placeholder="Text ('.$field->name.')">';
                     }elseif($field->type == 'textarea'){
-                        $html .= '<label for="textarea">Text Area ('.$field->name.')</label><textarea name="textarea///'.$field->name.'" id="textarea" class="form-control textarea" rows="3"></textarea>';
+                        $html .= '<label for="textarea">Text Area ('.$field->name.')</label><textarea name="textarea///'.$field->name.'" id="textarea" class="form-control textarea '.FieldController::makeClass($field->name).'" rows="3"></textarea>';
                     }elseif($field->type == 'date'){
-                        $html .= '<input name="date///'.$field->name.'" class="form-control date" type="date" >';
+                        $html .= '<input name="date///'.$field->name.'" class="form-control date '.FieldController::makeClass($field->name).'" type="date" >';
                     }elseif($field->type == 'link'){
                         $links = new ShortLink();
                         $links = $links->get();
-                        $html .= '<select name="link///'.$field->name.'" class="form-control link">';
+                        $html .= '<select name="link///'.$field->name.'" class="form-control link '.FieldController::makeClass($field->name).'">';
                         $html .= '<option disabled selected="selected">Link ('.$field->name.')</option>';
                         foreach ($links as $link) {
-                            $html .= '<option value="'.$link->id.'" class="form-control link">'.$link->slug.' '.$link->link.'</option>';
+                            $html .= '<option value="'.$link->id.'" class="form-control link '.FieldController::makeClass($field->name).'">'.$link->slug.' '.$link->link.'</option>';
                         }
                         $html .= '</select>';
                     }

@@ -14,7 +14,7 @@
 
         <!-- Fonts -->
         <link rel="dns-prefetch" href="//fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|Roboto:400,900&display=swap" rel="stylesheet">
         <!-- Fonts -->
 
         <!-- Styles -->
@@ -22,7 +22,7 @@
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     </head>
-    <body>
+    <body class=" @if(request()->get('pdf') == true) pdfnobg @endif">
         <div class="d-flex toggled" id="wrapper">
             @auth
                 @include('sidebar')

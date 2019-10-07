@@ -1,15 +1,56 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i|Roboto:400,900&display=swap');
+@import '../oldbs/variables';
+@import '../oldbs/mixins';
+@import '../oldbs/grid';
 // Variables
 @import 'variables';
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import '../bs/scss/bootstrap';
 
+
+@import 'mailgo';
 body {
     overflow-x: hidden;
 }
+.sec-1,.sec-2,.sec-3{
+    h1,h2,h3,h4,h5,h6{
+        font-family:$primary-font;
+    }
+    p,a{
+        font-family:$secondary-font;
+    }
+}
+.jumbotron {
+    background-color: transparent;
+    margin-bottom:0;
+    padding: 2rem 1rem;
+    h1 {
+        font-family:$primary-font;
+        color: black;
+        font-style:italic;
+        font-weight: bold;
+    }
+    a {
+        font-family: $secondary-font;
+        font-style:italic;
+        color: black;
+        &:hover {
+            text-decoration:none;
+            color: $blue;
+        }
+    }
+    .top-title {
+        font-size:2rem;
+        font-weight:bold;
+        font-style:italic;
+        font-family: $secondary-font;
+    }
+}
+
+
+
 
 #sidebar-wrapper {
     min-height: 100vh;
@@ -52,17 +93,7 @@ body {
     }
 }
 
-.sec-1{
-  //  border:1px solid red;
-}
-.sec-2{
-   // border:1px solid blue;
-}
-.sec-3{
-   // border:1px solid green;
-}
 div.field-group{
-   // border:1px dotted purple;
     margin-bottom: 5px;
 }
 h3.field-group{
@@ -82,9 +113,6 @@ h3.field-group{
         margin-left:5px;
         margin-bottom:0;
     }
-
-
-
     p.Title:after {content: ", ";}
 
     p.City\/State {
@@ -92,17 +120,14 @@ h3.field-group{
         margin:0;
         float:left;
     }
-
     p.City\/State:after {
         content:";";
     }
-
     p.From.Date {
         float: left;
         margin-left:5px;
         margin-bottom:0;
     }
-
     p.To.Date.If.Present {
         float: left;
         margin-bottom:0;
@@ -113,7 +138,6 @@ h3.field-group{
         margin-left:5px;
         margin-bottom:0;
     }
-
     p.Description {
         clear:both;
         margin-top:0;
@@ -124,7 +148,6 @@ h3.field-group{
         margin-bottom: 0;
 
     }
-
     p.To.Date:before {
         content: " - ";
         margin-left: 5px;
@@ -133,8 +156,18 @@ h3.field-group{
     p.To.Date:empty:before{
         display:none !important;
     }
-
+}
+.mailgo:hover{
+    color:$blue !important;
+    cursor:pointer !important;
 }
 
 
-@import 'mailgo';
+
+.nav-item.dropdown.open  .dropdown-menu {display: block !important;}
+.pdfnobg{
+    background-color:white !important;
+}
+.pdfnobg * {
+    background-color:white !important;
+}
