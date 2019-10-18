@@ -11309,6 +11309,19 @@ h3.field-group {
   display: none !important;
 }
 
+.sec-2 p.todateifpresent:empty:before {
+  display: none !important;
+}
+
+.sec-2 p.todateifpresent:empty:before {
+  display: none !important;
+}
+
+.sec-2 p.title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600 !important;
+}
+
 .mailgo:hover {
   color: #3490dc !important;
   cursor: pointer !important;

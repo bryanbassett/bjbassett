@@ -156,6 +156,17 @@ h3.field-group{
     p.todate:empty:before{
         display:none !important;
     }
+    p.todateifpresent:empty:before{
+        display:none !important;
+    }
+    p.todateifpresent:empty:before{
+        display:none !important;
+    }
+
+    p.title {
+        font-family:$primary-font;
+        font-weight: 600 !important;
+    }
 }
 .mailgo:hover{
     color:$blue !important;
