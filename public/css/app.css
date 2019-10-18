@@ -11339,3 +11339,15 @@ h3.field-group {
   background-color: white !important;
 }
 
+.badge.badge-light {
+  display: inline-block;
+  background-color: #e8e8e8;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+li {
+  position: relative;
+}
+
