@@ -18,7 +18,7 @@ class FieldController extends Controller
     {
         $fields = Field::all();
         $cats = Cats::parents()->with('children.children')->get();
-        return view('addField', compact('fields'),compact('cats'));
+        return view('addField', compact('fields','cats'));
     }
 
     /**

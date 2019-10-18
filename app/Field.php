@@ -12,6 +12,10 @@ class Field extends Model
 
     public function category()
     {
-        return $this->belongsTo(Cats::class, 'cat_id')->orderBy('weight');
+        return $this->belongsTo(Cats::class, 'cat_id')->get()->first();
+    }
+    public function cat()
+    {
+        return $this->hasOne(Cats::class, 'id');
     }
 }

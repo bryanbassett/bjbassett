@@ -60,10 +60,11 @@
                     </tr>
                     </thead>
                     <tbody>
+
                     @foreach($fields as $field)
                         <tr>
                             <td>{{ $field->name }}</td>
-                            <td>{{ $field->category->name }}</td>
+                            <td>{{ $field->category()->name }}</td>
                             <td>{{ $field->type }}</td>
                             <td><a href="/editfield/{{$field->id}}">Edit</a></td>
                         </tr>

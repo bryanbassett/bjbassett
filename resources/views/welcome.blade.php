@@ -77,7 +77,7 @@
                                             {{ $grandChildren1->name }}
                                         </h5>
                                         <ul>
-                                            @foreach($grandChilren1->allItems() as $item)
+                                            @foreach($grandChildren1->allItems() as $item)
                                                 <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }}">
                                                     @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
                                                         {!! $ItemX->figureIt($it_id,$item2) !!}

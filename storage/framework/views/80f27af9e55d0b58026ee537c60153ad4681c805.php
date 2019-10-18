@@ -80,7 +80,7 @@
 
                                         </h5>
                                         <ul>
-                                            <?php $__currentLoopData = $grandChilren1->allItems(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <?php $__currentLoopData = $grandChildren1->allItems(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                 <li class="<?php echo e(strtolower(str_replace(' ', '_', $item->name))); ?>">
                                                     <?php $__currentLoopData = $ItemX->deCode($item->fullContent); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it_id => $item2): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                         <?php echo $ItemX->figureIt($it_id,$item2); ?>

@@ -30,6 +30,8 @@ Route::group(['middleware' => ['auth']], function($router) {
     Route::get('additem', 'ItemsController@index');
     Route::post('additem', 'ItemsController@store')->name('add.item.post');
     Route::get('field/get_by_category', 'FieldController@get_by_category')->name('field.get_by_category');
+    Route::get('edititem/{item}', 'ItemsController@edit');
+    Route::patch('edititem/{item}', 'ItemsController@update')->name('update.item.post');
 
     //changing settings
     Route::get('setting/change', 'SettingsController@toggle_setting')->name('settings.toggle_setting');

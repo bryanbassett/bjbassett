@@ -62,7 +62,7 @@ class ItemsController extends Controller
      */
     public function edit(Item $item)
     {
-        return view('editItem', [compact('items')]);
+        return view('editItem', compact('item'));
     }
 
     /**
@@ -75,13 +75,13 @@ class ItemsController extends Controller
     public function update(Request $request,Item $item)
     {
         $attributes = $request->validate([
-            'type' => 'required',
+            'fullContent' => 'required',
         ]);
 
         $item->update($attributes);
 
         return redirect('additem')
-            ->with('success', 'ItemEdited Successfully');
+            ->with('success', 'Item Edited Successfully');
     }
 
     /**
