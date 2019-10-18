@@ -15,7 +15,7 @@
 
             @if( ($Setting->find(1))->enabled == 0)
             <p class="lead text-center">
-                Portfolio currently being modified, check back in five minutes.
+                Portfolio currently being modified, check back later.
             </p>
             @else
             <p class="lead text-center top-title">
@@ -54,6 +54,9 @@
                                         <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }}">
                                             @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
                                                 {!! $ItemX->figureIt($it_id,$item2) !!}
+                                                @auth
+                                                    <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
+                                                @endauth
                                             @endforeach
                                         </li>
 
@@ -68,6 +71,9 @@
                                             <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }}">
                                                 @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
                                                     {!! $ItemX->figureIt($it_id,$item2) !!}
+                                                    @auth
+                                                        <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
+                                                    @endauth
                                                 @endforeach
                                             </li>
                                         @endforeach
@@ -81,6 +87,9 @@
                                                 <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }}">
                                                     @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
                                                         {!! $ItemX->figureIt($it_id,$item2) !!}
+                                                        @auth
+                                                            <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
+                                                        @endauth
                                                     @endforeach
                                                 </li>
                                             @endforeach
@@ -105,6 +114,9 @@
                                         <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }}">
                                             @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
                                                 {!! $ItemX->figureIt($it_id,$item2) !!}
+                                                @auth
+                                                    <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
+                                                @endauth
                                             @endforeach
                                         </li>
                                     @endforeach
@@ -118,6 +130,9 @@
                                             <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }}">
                                                 @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
                                                     {!! $ItemX->figureIt($it_id,$item2) !!}
+                                                    @auth
+                                                        <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
+                                                    @endauth
                                                 @endforeach
                                             </li>
                                         @endforeach
@@ -131,6 +146,9 @@
                                                 <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }}">
                                                     @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
                                                         {!! $ItemX->figureIt($it_id,$item2) !!}
+                                                        @auth
+                                                            <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
+                                                        @endauth
                                                     @endforeach
                                                 </li>
                                             @endforeach
@@ -153,6 +171,9 @@
                                         <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }}">
                                             @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
                                                 {!! $ItemX->figureIt($it_id,$item2) !!}
+                                                @auth
+                                                    <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
+                                                @endauth
                                             @endforeach
                                         </li>
                                     @endforeach
@@ -167,6 +188,9 @@
                                             <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }}">
                                                 @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
                                                     {!! $ItemX->figureIt($it_id,$item2) !!}
+                                                    @auth
+                                                        <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
+                                                    @endauth
                                                 @endforeach
                                             </li>
                                         @endforeach
@@ -180,6 +204,9 @@
                                                 <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }}">
                                                     @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
                                                         {!! $ItemX->figureIt($it_id,$item2) !!}
+                                                        @auth
+                                                        <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
+                                                        @endauth
                                                     @endforeach
                                                 </li>
                                             @endforeach
