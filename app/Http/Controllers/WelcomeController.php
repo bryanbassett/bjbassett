@@ -30,6 +30,7 @@ class WelcomeController extends Controller
         $pdf = PDF::loadFile(URL::to('/').'?pdf=true')
             ->setOption('viewport-size', '1920x768')
             ->setOptions(['page-height' => '1650px', 'page-width' => '1275px'])
+            ->setOption('footer-center',utf8_decode('Resume/resumeCMS created by Bryan James Bassett using Laravel & VueJS'))
             ->inline('bbassett_resume.pdf');
         return $pdf;
     }

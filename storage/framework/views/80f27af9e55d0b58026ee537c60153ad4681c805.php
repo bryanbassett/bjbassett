@@ -258,6 +258,7 @@
 
         </div>
     <?php endif; ?>
+        <div class="bottombarrel"><span class="text-center">Resume/resumeCMS created by Bryan James Bassett using Laravel & VueJS</span></div>
   <div class="modal " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
           <modalpopper ref="mp"></modalpopper>
