@@ -64,6 +64,10 @@ class ItemsController extends Controller
     {
         return view('editItem', compact('item'));
     }
+    public function popEdit(Item $item)
+    {
+        return response()->json(['item' => $item]);
+    }
 
     /**
      * Update the specified resource in storage.

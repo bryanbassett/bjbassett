@@ -13,6 +13,7 @@
                 Bryan James Bassett
             </h1>
 
+
             @if( ($Setting->find(1))->enabled == 0)
             <p class="lead text-center">
                 Portfolio currently being modified, check back later.
@@ -51,9 +52,9 @@
                                 <ul>
 
                                     @foreach($sec1->allItems() as $item)
-                                        <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }}">
+                                        <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }} it-id-{{$item->id}}">
                                             @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
-                                                {!! $ItemX->figureIt($it_id,$item2) !!}
+                                                <items ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
 
                                             @endforeach
                                                 @auth
@@ -69,9 +70,9 @@
                                     </h4>
                                     <ul>
                                         @foreach($children1->allItems() as $item)
-                                            <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }}">
+                                            <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }} it-id-{{$item->id}}">
                                                 @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
-                                                    {!! $ItemX->figureIt($it_id,$item2) !!}
+                                                    <items ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
 
                                                 @endforeach
                                                     @auth
@@ -86,9 +87,9 @@
                                         </h5>
                                         <ul>
                                             @foreach($grandChildren1->allItems() as $item)
-                                                <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }}">
+                                                <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }} it-id-{{$item->id}}">
                                                     @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
-                                                        {!! $ItemX->figureIt($it_id,$item2) !!}
+                                                        <items ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
 
                                                     @endforeach
                                                         @auth
@@ -114,9 +115,9 @@
                                 </h3>
                                 <ul>
                                     @foreach($sec2->allItems() as $item)
-                                        <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }}">
+                                        <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }} it-id-{{$item->id}}">
                                             @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
-                                                {!! $ItemX->figureIt($it_id,$item2) !!}
+                                                <items ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
 
                                             @endforeach
                                                 @auth
@@ -131,9 +132,9 @@
                                     </h4>
                                     <ul>
                                         @foreach($children2->allItems() as $item)
-                                            <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }}">
+                                            <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }} it-id-{{$item->id}}">
                                                 @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
-                                                    {!! $ItemX->figureIt($it_id,$item2) !!}
+                                                    <items ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
 
                                                 @endforeach
                                                     @auth
@@ -148,9 +149,9 @@
                                         </h5>
                                         <ul>
                                             @foreach($grandChildren2->allItems() as $item)
-                                                <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }}">
+                                                <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }} it-id-{{$item->id}}">
                                                     @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
-                                                        {!! $ItemX->figureIt($it_id,$item2) !!}
+                                                        <items ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
 
                                                     @endforeach
                                                         @auth
@@ -174,9 +175,9 @@
                                 </h3>
                                 <ul>
                                     @foreach($sec3->allItems() as $item)
-                                        <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }}">
+                                        <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }} it-id-{{$item->id}}">
                                             @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
-                                                {!! $ItemX->figureIt($it_id,$item2) !!}
+                                                <items ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
 
                                             @endforeach
                                                 @auth
@@ -192,9 +193,9 @@
                                     </h4>
                                     <ul>
                                         @foreach($children3->allItems() as $item)
-                                            <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }}">
+                                            <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }} it-id-{{$item->id}}">
                                                 @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
-                                                    {!! $ItemX->figureIt($it_id,$item2) !!}
+                                                    <items ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
 
                                                 @endforeach
                                                     @auth
@@ -209,11 +210,11 @@
                                         </h5>
                                         <ul>
                                             @foreach($grandChildren3->allItems() as $item)
-                                                <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }}">
+                                                <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }} it-id-{{$item->id}}">
                                                     @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
-                                                        {!! $ItemX->figureIt($it_id,$item2) !!}
-
+                                                        <items ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
                                                     @endforeach
+
                                                         @auth
                                                             <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
                                                         @endauth
@@ -230,6 +231,11 @@
 
         </div>
     @endif
-
+  <div class="modal " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <modalpopper ref="mp"></modalpopper>
+      </div>
+  </div>
+    <!--  data-toggle="modal" data-target="#exampleModal" -->
 @endsection
 

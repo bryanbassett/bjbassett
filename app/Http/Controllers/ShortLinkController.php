@@ -58,4 +58,9 @@ class ShortLinkController extends Controller
         $shortLink->save();
         return redirect($shortLink->link);
     }
+    public function showCustomersData()
+    {
+        $listCustomers = ShortLink::all();
+        return response()->json(['messages' => $listCustomers]);
+    }
 }

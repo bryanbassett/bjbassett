@@ -20,4 +20,5 @@ class ShortLink extends Model
     public static function totalClicks(){
         return ShortLink::sum('clicks');
     }
+
 }
