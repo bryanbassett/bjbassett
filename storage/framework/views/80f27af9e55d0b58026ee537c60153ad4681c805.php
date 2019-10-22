@@ -53,7 +53,7 @@
 
                                             <?php $__currentLoopData = $ItemX->deCode($item->fullContent); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it_id => $item2): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                 <items :item-identity="<?php echo e($item->id); ?>" ref="item-<?php echo e($item->id); ?>"  :items-data="<?php echo e(json_encode($ItemX->figureIt($it_id,$item2))); ?> "></items>
-
+                                            <div style="clear:both"></div>
                                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                                 <?php if(auth()->guard()->check()): ?>
                                                     <a class="badge badge-light" href="/edititem/<?php echo e($item->id); ?>">edit</a>
@@ -72,7 +72,7 @@
 
                                                 <?php $__currentLoopData = $ItemX->deCode($item->fullContent); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it_id => $item2): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                     <items :item-identity="<?php echo e($item->id); ?>" ref="item-<?php echo e($item->id); ?>"  :items-data="<?php echo e(json_encode($ItemX->figureIt($it_id,$item2))); ?> "></items>
-
+                                                <div style="clear:both"></div>
                                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                                     <?php if(auth()->guard()->check()): ?>
                                                         <a class="badge badge-light" href="/edititem/<?php echo e($item->id); ?>">edit</a>
@@ -90,7 +90,7 @@
 
                                                     <?php $__currentLoopData = $ItemX->deCode($item->fullContent); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it_id => $item2): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                         <items :item-identity="<?php echo e($item->id); ?>" ref="item-<?php echo e($item->id); ?>"  :items-data="<?php echo e(json_encode($ItemX->figureIt($it_id,$item2))); ?> "></items>
-
+                                                    <div style="clear:both"></div>
                                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                                         <?php if(auth()->guard()->check()): ?>
                                                             <a class="badge badge-light" href="/edititem/<?php echo e($item->id); ?>">edit</a>
@@ -119,7 +119,7 @@
 
                                             <?php $__currentLoopData = $ItemX->deCode($item->fullContent); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it_id => $item2): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                 <items :item-identity="<?php echo e($item->id); ?>"  :items-data="<?php echo e(json_encode($ItemX->figureIt($it_id,$item2))); ?> "></items>
-
+                                            <div style="clear:both"></div>
                                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                                 <?php if(auth()->guard()->check()): ?>
                                                     <a class="badge badge-light" href="/edititem/<?php echo e($item->id); ?>">edit</a>
@@ -137,7 +137,7 @@
 
                                                 <?php $__currentLoopData = $ItemX->deCode($item->fullContent); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it_id => $item2): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                     <items :item-identity="<?php echo e($item->id); ?>" ref="item-<?php echo e($item->id); ?>"  :items-data="<?php echo e(json_encode($ItemX->figureIt($it_id,$item2))); ?> "></items>
-
+                                                <div style="clear:both"></div>
                                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                                     <?php if(auth()->guard()->check()): ?>
                                                         <a class="badge badge-light" href="/edititem/<?php echo e($item->id); ?>">edit</a>
@@ -155,7 +155,7 @@
 
                                                     <?php $__currentLoopData = $ItemX->deCode($item->fullContent); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it_id => $item2): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                         <items :item-identity="<?php echo e($item->id); ?>" ref="item-<?php echo e($item->id); ?>"  :items-data="<?php echo e(json_encode($ItemX->figureIt($it_id,$item2))); ?> "></items>
-
+                                                    <div style="clear:both"></div>
                                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                                         <?php if(auth()->guard()->check()): ?>
                                                             <a class="badge badge-light" href="/edititem/<?php echo e($item->id); ?>">edit</a>
@@ -182,7 +182,7 @@
 
                                             <?php $__currentLoopData = $ItemX->deCode($item->fullContent); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it_id => $item2): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                 <items :item-identity="<?php echo e($item->id); ?>" ref="item-<?php echo e($item->id); ?>"  :items-data="<?php echo e(json_encode($ItemX->figureIt($it_id,$item2))); ?> "></items>
-
+                                            <div style="clear:both"></div>
                                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                                 <?php if(auth()->guard()->check()): ?>
                                                     <a class="badge badge-light" href="/edititem/<?php echo e($item->id); ?>">edit</a>
@@ -201,7 +201,7 @@
 
                                                 <?php $__currentLoopData = $ItemX->deCode($item->fullContent); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it_id => $item2): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                     <items :item-identity="<?php echo e($item->id); ?>" ref="item-<?php echo e($item->id); ?>"  :items-data="<?php echo e(json_encode($ItemX->figureIt($it_id,$item2))); ?> "></items>
-
+                                                <div style="clear:both"></div>
                                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                                     <?php if(auth()->guard()->check()): ?>
                                                         <a class="badge badge-light" href="/edititem/<?php echo e($item->id); ?>">edit</a>
@@ -219,6 +219,7 @@
 
                                                     <?php $__currentLoopData = $ItemX->deCode($item->fullContent); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it_id => $item2): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                         <items :item-identity="<?php echo e($item->id); ?>" ref="item-<?php echo e($item->id); ?>"  :items-data="<?php echo e(json_encode($ItemX->figureIt($it_id,$item2))); ?> "></items>
+                                                        <div style="clear:both"></div>
                                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
                                                         <?php if(auth()->guard()->check()): ?>
