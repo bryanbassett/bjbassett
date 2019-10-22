@@ -196,3 +196,30 @@ li {
 .modal-backdrop{
     opacity: .2;
 }
+
+
+div.part_time_experience span p.title{
+    margin-top:10px
+}
+div.part_time_experience span p.companyname{
+    margin-top:10px
+}
+
+
+p.title:first-of-type  {
+    clear: left;
+    margin-top:0px;
+
+}
+p.companyname:first-of-type  {
+    margin-top:0px;
+
+}
+div.part_time_experience span:nth-child(1) p {
+    margin-top:0px;
+
+}
+div.part_time_experience span:nth-child(2) p {
+    margin-top:0px;
+
+}
