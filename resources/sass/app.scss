@@ -199,3 +199,17 @@ li {
 }
 
 
+
+span.nameline{
+    margin:0 !important;
+    padding:0;
+    text-transform:uppercase;
+
+}
+.display-1{
+    line-height: .75;
+}
+span.nameline:after { content: '\A'; white-space:pre; }
+p.lead.top-title {
+    margin-bottom: 0;
+}

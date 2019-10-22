@@ -9,19 +9,21 @@
         <div class="jumbotron">
 
 
-            <h1 class="display-1 text-center">
-                Bryan James Bassett
+            <h1 class="display-1 ">
+               <span class="nameline">Bryan</span>
+                <span class="nameline" >James</span>
+                <span class="nameline">Bassett</span>
             </h1>
             @if( ($Setting->find(1))->enabled == 0)
             <p class="lead text-center">
                 Portfolio currently being modified, check back later.
             </p>
             @else
-            <p class="lead text-center top-title">
-               Application Developer
+            <p class="lead top-title">
+               Full-Stack Developer
             </p>
             @endif
-            <p class="lead text-center">
+            <p class="lead ">
 
             @if(request()->get('pdf') == true)
                     <a href="#mailgo" data-address="bryan" data-domain="bjbassett.org">bryan@bjbassett.org</a> - <a class="mailgo" data-tel="2168028141">216.802.8141</a>
