@@ -100,36 +100,39 @@ h3.field-group{
     border-bottom:1px solid black;
 }
 .sec-2{
+    span span {
+        display: inline !important;
+
+    }
+    span.companyname:after { content: '\A'; white-space:pre; }
+    span.todateifpresent:after { content: '\A'; white-space:pre; }
+    div div div{
+        margin-bottom:10px;
+    }
     ul {
         list-style: none;
     }
     span.title {
-        float:left;
         font-weight: bold;
         margin-bottom:0;
     }
     span.companyname {
-        float:left;
         margin-left:5px;
         margin-bottom:0;
     }
     span.title:after {content: ", ";}
 
     span.citystate {
-        clear:both;
         margin:0;
-        float:left;
     }
     span.citystate:after {
         content:";";
     }
     span.fromdate {
-        float: left;
         margin-left:5px;
         margin-bottom:0;
     }
     span.todateifpresent {
-        float: left;
         margin-bottom:0;
         font-style:italic;
     }
@@ -139,13 +142,10 @@ h3.field-group{
         margin-bottom:0;
     }
     span.description {
-        clear:both;
-        float:left;
         margin-top:0;
         font-weight: bold;
     }
     span.todate {
-        float: left;
         margin-bottom: 0;
 
     }
@@ -198,26 +198,3 @@ li {
 }
 
 
-div span span.title{
-    margin-top:10px;
-
-}
-div span span.companyname{
-    margin-top:10px;
-}
-
-
-div span:nth-child(1) span {
-   // margin-top:0px;
-
-}
-div span:nth-child(2) span {
-    //margin-top:0px;
-}
-
-div span:first-of-type .title:first-of-type{
-     //margin-top:0px;
- }
-div span:first-of-type .companyname:first-of-type{
-    //margin-top:0px;
-}

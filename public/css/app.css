@@ -11243,18 +11243,34 @@ h3.field-group {
   border-bottom: 1px solid black;
 }
 
+.sec-2 span span {
+  display: inline !important;
+}
+
+.sec-2 span.companyname:after {
+  content: "\A";
+  white-space: pre;
+}
+
+.sec-2 span.todateifpresent:after {
+  content: "\A";
+  white-space: pre;
+}
+
+.sec-2 div div div {
+  margin-bottom: 10px;
+}
+
 .sec-2 ul {
   list-style: none;
 }
 
 .sec-2 span.title {
-  float: left;
   font-weight: bold;
   margin-bottom: 0;
 }
 
 .sec-2 span.companyname {
-  float: left;
   margin-left: 5px;
   margin-bottom: 0;
 }
@@ -11264,9 +11280,7 @@ h3.field-group {
 }
 
 .sec-2 span.citystate {
-  clear: both;
   margin: 0;
-  float: left;
 }
 
 .sec-2 span.citystate:after {
@@ -11274,13 +11288,11 @@ h3.field-group {
 }
 
 .sec-2 span.fromdate {
-  float: left;
   margin-left: 5px;
   margin-bottom: 0;
 }
 
 .sec-2 span.todateifpresent {
-  float: left;
   margin-bottom: 0;
   font-style: italic;
 }
@@ -11292,14 +11304,11 @@ h3.field-group {
 }
 
 .sec-2 span.description {
-  clear: both;
-  float: left;
   margin-top: 0;
   font-weight: bold;
 }
 
 .sec-2 span.todate {
-  float: left;
   margin-bottom: 0;
 }
 
@@ -11356,13 +11365,5 @@ li {
 
 .modal-backdrop {
   opacity: 0.2;
-}
-
-div span span.title {
-  margin-top: 10px;
-}
-
-div span span.companyname {
-  margin-top: 10px;
 }
 
