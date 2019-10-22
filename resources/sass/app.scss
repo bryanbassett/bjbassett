@@ -181,9 +181,7 @@ h3.field-group{
 .pdfnobg{
     background-color:white !important;
 }
-.pdfnobg * {
-    background-color:white !important;
-}
+
 .badge.badge-light{
     display:inline-block;
     background-color:#e8e8e8;
@@ -212,4 +210,20 @@ span.nameline{
 span.nameline:after { content: '\A'; white-space:pre; }
 p.lead.top-title {
     margin-bottom: 0;
+}
+.topper{
+    display:block;
+    background-image: url('../images/bjb.svg');
+    min-height: 260px;
+    background-repeat: no-repeat;
+    background-position: left;
+    text-align:left;
+    background-size: contain;
+}
+.jumbotron{
+    padding: 0;
+    border: 0px solid white;
+    border-bottom: 19px solid black;
+    border-radius: 0 !important;
+    margin-bottom: 37px;
 }

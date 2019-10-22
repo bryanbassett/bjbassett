@@ -9,11 +9,22 @@
         <div class="jumbotron">
 
 
-            <h1 class="display-1 ">
-               <span class="nameline">Bryan</span>
-                <span class="nameline" >James</span>
-                <span class="nameline">Bassett</span>
-            </h1>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h1 class="display-1 text-hide invisible">
+                            Bryan James Bassett
+                        </h1>
+                        <div class="topper"  >
+                    </div>
+                    <div class="col-sm-3">
+                    </div>
+                    <div class="col-sm-3">
+                    </div>
+                </div>
+            </div>
+
             @if( ($Setting->find(1))->enabled == 0)
             <p class="lead text-center">
                 Portfolio currently being modified, check back later.
