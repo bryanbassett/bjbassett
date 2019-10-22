@@ -54,8 +54,9 @@
 
                                             @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
                                                 <items :item-identity="{{$item->id}}" ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
-                                            <div style="clear:both"></div>
+
                                             @endforeach
+                                                <div style="clear:both"></div>
                                                 @auth
                                                     <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
                                                 @endauth
@@ -72,8 +73,9 @@
 
                                                 @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
                                                     <items :item-identity="{{$item->id}}" ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
-                                                <div style="clear:both"></div>
+
                                                 @endforeach
+                                                    <div style="clear:both"></div>
                                                     @auth
                                                         <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
                                                     @endauth
@@ -89,8 +91,9 @@
 
                                                     @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
                                                         <items :item-identity="{{$item->id}}" ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
-                                                    <div style="clear:both"></div>
+
                                                     @endforeach
+                                                        <div style="clear:both"></div>
                                                         @auth
                                                             <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
                                                         @endauth
@@ -117,8 +120,10 @@
 
                                             @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
                                                 <items :item-identity="{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
-                                            <div style="clear:both"></div>
+
                                             @endforeach
+                                                <div style="clear:both"></div>
+
                                                 @auth
                                                     <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
                                                 @endauth
@@ -134,8 +139,9 @@
 
                                                 @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
                                                     <items :item-identity="{{$item->id}}" ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
-                                                <div style="clear:both"></div>
+
                                                 @endforeach
+                                                    <div style="clear:both"></div>
                                                     @auth
                                                         <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
                                                     @endauth
@@ -151,8 +157,9 @@
 
                                                     @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
                                                         <items :item-identity="{{$item->id}}" ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
-                                                    <div style="clear:both"></div>
+
                                                     @endforeach
+                                                        <div style="clear:both"></div>
                                                         @auth
                                                             <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
                                                         @endauth
@@ -177,8 +184,9 @@
 
                                             @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
                                                 <items :item-identity="{{$item->id}}" ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
-                                            <div style="clear:both"></div>
+
                                             @endforeach
+                                                <div style="clear:both"></div>
                                                 @auth
                                                     <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
                                                 @endauth
@@ -195,8 +203,9 @@
 
                                                 @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
                                                     <items :item-identity="{{$item->id}}" ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
-                                                <div style="clear:both"></div>
+
                                                 @endforeach
+                                                    <div style="clear:both"></div>
                                                     @auth
                                                         <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
                                                     @endauth
@@ -212,9 +221,9 @@
 
                                                     @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
                                                         <items :item-identity="{{$item->id}}" ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
-                                                        <div style="clear:both"></div>
-                                                    @endforeach
 
+                                                    @endforeach
+                                                        <div style="clear:both"></div>
                                                         @auth
                                                             <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
                                                         @endauth
