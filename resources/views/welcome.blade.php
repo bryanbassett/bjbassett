@@ -49,55 +49,54 @@
                                 <h3 class="field-group">
                                     {{ $sec1->name  }}
                                 </h3>
-                                <ul>
-
+                                <div class="{{strtolower(str_replace(' ', '_', $sec1->name)) }}">
                                     @foreach($sec1->allItems() as $item)
-                                        <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }} it-id-{{$item->id}}">
+
                                             @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
-                                                <items ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
+                                                <items :item-identity="{{$item->id}}" ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
 
                                             @endforeach
                                                 @auth
                                                     <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
                                                 @endauth
-                                        </li>
+
 
                                     @endforeach
-                                </ul>
+                                </div>
                                 @foreach($sec1->children as $children1)
                                     <h4>
                                         {{ $children1->name }}
                                     </h4>
-                                    <ul>
+                                    <div class="{{strtolower(str_replace(' ', '_', $children1->name)) }}">
                                         @foreach($children1->allItems() as $item)
-                                            <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }} it-id-{{$item->id}}">
+
                                                 @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
-                                                    <items ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
+                                                    <items :item-identity="{{$item->id}}" ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
 
                                                 @endforeach
                                                     @auth
                                                         <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
                                                     @endauth
-                                            </li>
+
                                         @endforeach
-                                    </ul>
+                                    </div>
                                     @foreach($children1->children as $grandChildren1)
                                         <h5>
                                             {{ $grandChildren1->name }}
                                         </h5>
-                                        <ul>
+                                        <div class="{{strtolower(str_replace(' ', '_', $grandChildren1->name)) }}">
                                             @foreach($grandChildren1->allItems() as $item)
-                                                <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }} it-id-{{$item->id}}">
+
                                                     @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
-                                                        <items ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
+                                                        <items :item-identity="{{$item->id}}" ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
 
                                                     @endforeach
                                                         @auth
                                                             <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
                                                         @endauth
-                                                </li>
+
                                             @endforeach
-                                        </ul>
+                                        </div>
                                     @endforeach
                                 @endforeach
                             </div>
@@ -113,53 +112,53 @@
                                 <h3 class="field-group">
                                     {{ $sec2->name  }}
                                 </h3>
-                                <ul>
+                                <div class="{{strtolower(str_replace(' ', '_', $sec2->name)) }}">
                                     @foreach($sec2->allItems() as $item)
-                                        <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }} it-id-{{$item->id}}">
+
                                             @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
-                                                <items ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
+                                                <items :item-identity="{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
 
                                             @endforeach
                                                 @auth
                                                     <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
                                                 @endauth
-                                        </li>
+
                                     @endforeach
-                                </ul>
+                                </div>
                                 @foreach($sec2->children as $children2)
                                     <h4>
                                         {{ $children2->name }}
                                     </h4>
-                                    <ul>
+                                    <div class="{{strtolower(str_replace(' ', '_', $children2->name)) }}">
                                         @foreach($children2->allItems() as $item)
-                                            <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }} it-id-{{$item->id}}">
+
                                                 @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
-                                                    <items ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
+                                                    <items :item-identity="{{$item->id}}" ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
 
                                                 @endforeach
                                                     @auth
                                                         <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
                                                     @endauth
-                                            </li>
+
                                         @endforeach
-                                    </ul>
+                                    </div>
                                     @foreach($children2->children as $grandChildren2)
                                         <h5>
                                             {{ $grandChildren2->name }}
                                         </h5>
-                                        <ul>
+                                        <div class="{{strtolower(str_replace(' ', '_', $grandChildren2->name)) }}">
                                             @foreach($grandChildren2->allItems() as $item)
-                                                <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }} it-id-{{$item->id}}">
+
                                                     @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
-                                                        <items ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
+                                                        <items :item-identity="{{$item->id}}" ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
 
                                                     @endforeach
                                                         @auth
                                                             <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
                                                         @endauth
-                                                </li>
+
                                             @endforeach
-                                        </ul>
+                                        </div>
                                     @endforeach
                                 @endforeach
                             </div>
@@ -173,54 +172,54 @@
                                 <h3 class="field-group">
                                     {{ $sec3->name  }}
                                 </h3>
-                                <ul>
+                                <div class="{{strtolower(str_replace(' ', '_', $sec3->name)) }}">
                                     @foreach($sec3->allItems() as $item)
-                                        <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }} it-id-{{$item->id}}">
+
                                             @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
-                                                <items ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
+                                                <items :item-identity="{{$item->id}}" ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
 
                                             @endforeach
                                                 @auth
                                                     <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
                                                 @endauth
-                                        </li>
+
                                     @endforeach
-                                </ul>
+                                </div>
 
                                 @foreach($sec3->children as $children3)
                                     <h4>
                                         {{ $children3->name }}
                                     </h4>
-                                    <ul>
+                                    <div class="{{strtolower(str_replace(' ', '_', $children3->name)) }}">
                                         @foreach($children3->allItems() as $item)
-                                            <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }} it-id-{{$item->id}}">
+
                                                 @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
-                                                    <items ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
+                                                    <items :item-identity="{{$item->id}}" ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
 
                                                 @endforeach
                                                     @auth
                                                         <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
                                                     @endauth
-                                            </li>
+
                                         @endforeach
-                                    </ul>
+                                    </div>
                                     @foreach($children3->children as $grandChildren3)
                                         <h5>
                                             {{ $grandChildren3->name }}
                                         </h5>
-                                        <ul>
+                                        <div class="{{strtolower(str_replace(' ', '_', $grandChildren3->name)) }}">
                                             @foreach($grandChildren3->allItems() as $item)
-                                                <li class="{{   strtolower(str_replace(' ', '_', $item->name)) }} it-id-{{$item->id}}">
+
                                                     @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
-                                                        <items ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
+                                                        <items :item-identity="{{$item->id}}" ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
                                                     @endforeach
 
                                                         @auth
                                                             <a class="badge badge-light" href="/edititem/{{$item->id}}">edit</a>
                                                         @endauth
-                                                </li>
+
                                             @endforeach
-                                        </ul>
+                                        </div>
                                     @endforeach
                                 @endforeach
                             </div>
