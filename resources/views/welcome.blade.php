@@ -106,7 +106,7 @@
                 </div>
             </div>
             <div class="row second-row">
-                <div class="col-xs-12 col-sm-6   sec-2">
+                <div class="col-xs-12 col-sm-4   sec-2">
                     @foreach($section2 as $sec2)
                         @if($sec2->noParent())
                             <div class="field-group">
@@ -170,7 +170,7 @@
                         @endif
                     @endforeach
                 </div>
-                <div class="col-xs-12 col-sm-6 sec-3">
+                <div class="col-xs-12 col-sm-8 sec-3">
                     @foreach($section3 as $sec3)
                         @if( $sec3->noParent())
                             <div class="field-group">
