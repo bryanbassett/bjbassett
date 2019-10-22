@@ -140,6 +140,7 @@ h3.field-group{
     }
     span.description {
         clear:both;
+        float:left;
         margin-top:0;
         font-weight: bold;
     }
@@ -197,11 +198,11 @@ li {
 }
 
 
-div.part_time_experience span span.title{
+div span span.title{
     margin-top:10px;
 
 }
-div.part_time_experience span span.companyname{
+div span span.companyname{
     margin-top:10px;
 }
 
@@ -215,20 +216,12 @@ span.companyname:first-of-type  {
     margin-top:0px;
 
 }
-div.part_time_experience span:nth-child(1) span {
+div span:nth-child(1) span {
     margin-top:0px;
 
 }
-div.part_time_experience span:nth-child(2) span {
+div span:nth-child(2) span {
     margin-top:0px;
-
 }
-div.full_time_experience span:nth-child(1) {
-    white-space: nowrap;
 
-}
-div.full_time_experience span:nth-child(2) {
-    white-space: nowrap;
-
-}
 
