@@ -198,15 +198,16 @@ li {
 
 
 div.part_time_experience span p.title{
-    margin-top:10px
+    margin-top:10px;
+    clear:both;
 }
 div.part_time_experience span p.companyname{
-    margin-top:10px
+    margin-top:10px;
 }
 
 
 p.title:first-of-type  {
-    clear: both;
+
     margin-top:0px;
 
 }
