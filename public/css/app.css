@@ -11154,10 +11154,13 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.sec-1 span,
 .sec-1 p,
 .sec-1 a,
+.sec-2 span,
 .sec-2 p,
 .sec-2 a,
+.sec-3 span,
 .sec-3 p,
 .sec-3 a {
   font-family: "Lato", sans-serif;
@@ -11244,80 +11247,80 @@ h3.field-group {
   list-style: none;
 }
 
-.sec-2 p.title {
+.sec-2 span.title {
   float: left;
   font-weight: bold;
   margin-bottom: 0;
 }
 
-.sec-2 p.companyname {
+.sec-2 span.companyname {
   float: left;
   margin-left: 5px;
   margin-bottom: 0;
 }
 
-.sec-2 p.title:after {
+.sec-2 span.title:after {
   content: ", ";
 }
 
-.sec-2 p.citystate {
+.sec-2 span.citystate {
   clear: both;
   margin: 0;
   float: left;
 }
 
-.sec-2 p.citystate:after {
+.sec-2 span.citystate:after {
   content: ";";
 }
 
-.sec-2 p.fromdate {
+.sec-2 span.fromdate {
   float: left;
   margin-left: 5px;
   margin-bottom: 0;
 }
 
-.sec-2 p.todateifpresent {
+.sec-2 span.todateifpresent {
   float: left;
   margin-bottom: 0;
   font-style: italic;
 }
 
-.sec-2 p.todateifpresent:before {
+.sec-2 span.todateifpresent:before {
   content: " - ";
   margin-left: 5px;
   margin-bottom: 0;
 }
 
-.sec-2 p.description {
+.sec-2 span.description {
   clear: both;
   margin-top: 0;
   font-weight: bold;
 }
 
-.sec-2 p.todate {
+.sec-2 span.todate {
   float: left;
   margin-bottom: 0;
 }
 
-.sec-2 p.todate:before {
+.sec-2 span.todate:before {
   content: " - ";
   margin-left: 5px;
   margin-bottom: 0;
 }
 
-.sec-2 p.todate:empty:before {
+.sec-2 span.todate:empty:before {
   display: none !important;
 }
 
-.sec-2 p.todateifpresent:empty:before {
+.sec-2 span.todateifpresent:empty:before {
   display: none !important;
 }
 
-.sec-2 p.todateifpresent:empty:before {
+.sec-2 span.todateifpresent:empty:before {
   display: none !important;
 }
 
-.sec-2 p.title {
+.sec-2 span.title {
   font-family: "Roboto", sans-serif;
   font-weight: 600 !important;
 }
@@ -11354,28 +11357,27 @@ li {
   opacity: 0.2;
 }
 
-div.part_time_experience span p.title {
-  margin-top: 10px;
-  clear: both;
-}
-
-div.part_time_experience span p.companyname {
+div.part_time_experience span span.title {
   margin-top: 10px;
 }
 
-p.title:first-of-type {
+div.part_time_experience span span.companyname {
+  margin-top: 10px;
+}
+
+span.title:first-of-type {
   margin-top: 0px;
 }
 
-p.companyname:first-of-type {
+span.companyname:first-of-type {
   margin-top: 0px;
 }
 
-div.part_time_experience span:nth-child(1) p {
+div.part_time_experience span:nth-child(1) span {
   margin-top: 0px;
 }
 
-div.part_time_experience span:nth-child(2) p {
+div.part_time_experience span:nth-child(2) span {
   margin-top: 0px;
 }
 

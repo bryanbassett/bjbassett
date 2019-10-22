@@ -12,8 +12,6 @@
             <h1 class="display-1 text-center">
                 Bryan James Bassett
             </h1>
-
-
             @if( ($Setting->find(1))->enabled == 0)
             <p class="lead text-center">
                 Portfolio currently being modified, check back later.

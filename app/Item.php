@@ -24,10 +24,10 @@ class Item extends Model
         if($type == 'link'){
              return '<a class=" '.$fc->makeClass($name).'" href="/s/'.ShortLink::find($item)->slug.'">'.$name.'</a>';
         }elseif($type == 'text' || $type == 'textarea'){
-            return '<p class=" '.$fc->makeClass($name).'">'.$item.'</p>';
+            return '<span class=" '.$fc->makeClass($name).'">'.$item.'</span>';
         }elseif($type == 'date'){
             $item = trim(preg_replace('/\s+/', ' ', $item));
-            return '<p class=" '.$fc->makeClass($name).'">'.($item!='' ? date("n/Y", strtotime($item)) : '').'</p>';
+            return '<span class=" '.$fc->makeClass($name).'">'.($item!='' ? date("n/Y", strtotime($item)) : '').'</span>';
         }
 
     }
