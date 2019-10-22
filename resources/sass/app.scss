@@ -185,9 +185,8 @@ h3.field-group{
 .badge.badge-light{
     display:inline-block;
     background-color:#e8e8e8;
-    position:absolute;
-    top:0;
-    right:0;
+    float: left;
+    clear: both;
 }
 
 li {
