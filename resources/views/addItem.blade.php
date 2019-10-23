@@ -67,6 +67,7 @@
 
 @section('scripts')
     <script type="text/javascript">
+        $=jQuery;
         $(function(ready){
             $("#category").change(function(){
                 $('.itemForm').html('');
