@@ -22,7 +22,7 @@ class Item extends Model
         $type = (explode('///',$lookup ))[0];
         $name = str_replace('_',' ',(explode('///',$lookup ))[1]);
         if($type == 'link'){
-             return '<a class=" '.$fc->makeClass($name).'" href="/s/'.ShortLink::find($item)->slug.'">link</a>';
+             return '<a class=" '.$fc->makeClass($name).'" href="/s/'.ShortLink::find($item)->slug.'">https://bjbassett.org/s/'.ShortLink::find($item)->slug.'</a>';
         }elseif($type == 'text' || $type == 'textarea'){
             return '<span class=" '.$fc->makeClass($name).'">'.$item.'</span>';
         }elseif($type == 'date'){
