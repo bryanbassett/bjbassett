@@ -197,7 +197,8 @@ h3.field-group{
         white-space: pre;
     }
     span.pname {
-        font-weight:bold;
+        font-family:$primary-font;
+        font-weight: 600 !important;
     }
     a.plink{
         text-decoration:underline;
