@@ -6,8 +6,22 @@
 
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
-
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <meta name="description" content="I make websites for a living using Laravel, Drupal, & WordPress.">
+        <link rel="canonical" href="https://bjbassett.org">
+        <meta name="robots" content="index,follow">
+        <meta name="twitter:title" content="Bryan James Bassett">
+        <meta name="twitter:description" content="The resume/portfolio of Full-Stack Developer, Bryan James Bassett">
+        <meta name="twitter:image" content="https://bjbassett.org/images/bjb.svg">
+        <meta name="twitter:site" content="@bryanloveswater">
+        <meta name="twitter:creator" content="@bryanloveswater">
+        <meta name="twitter:url" content="https://bjbassett.org">
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Bryan James Bassett"/>
+        <meta property="og:description" content="I make websites for a living using Laravel, Drupal, & WordPress."/>
+        <meta property="og:image" content="https://bjbassett.org/images/bjb.svg"/>
+        <meta property="og:url" content="https://bjbassett.org"/>
+        <meta property="og:site_name" content="The resume/portfolio of Full-Stack Developer, Bryan James Bassett"/>
+        <title>Bryan James Bassett</title>
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
