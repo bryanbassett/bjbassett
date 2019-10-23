@@ -170,6 +170,32 @@ h3.field-group{
         font-family:$primary-font;
         font-weight: 600 !important;
     }
+    span.school{    font-family: Roboto,sans-serif;
+        font-weight: 600!important;}
+    span.school:after {
+        content: "; ";
+    }
+    span.graduationdate{
+        font-style:italic;
+    }
+    span.graduationdate:before {
+        content: "Graduated ";
+    }
+    span.graduationdate:after {
+        content: "\A";
+        white-space: pre;
+    }
+    span.pname:after {
+        content: "\A";
+        white-space: pre;
+    }
+    span.pdesc:after {
+        content: "\A";
+        white-space: pre;
+    }
+    span.pname {
+        font-weight:bold;
+    }
 }
 .mailgo:hover{
     color:$blue !important;
@@ -334,22 +360,5 @@ body{
 
 }
 
-.sec-2 {
-    span.school{    font-family: Roboto,sans-serif;
-        font-weight: 600!important;}
-    span.school:after {
-        content: "; ";
-    }
-    span.graduationdate{
-        font-style:italic;
-    }
-    span.graduationdate:before {
-        content: "Graduated ";
-    }
-    span.graduationdate:after {
-        content: "\A";
-        white-space: pre;
-    }
 
-}
 
