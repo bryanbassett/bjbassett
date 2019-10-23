@@ -69,7 +69,7 @@ $(function(ready){
         $("#category").change(function(){
             $('.itemForm').html('');
             $.ajax({
-                url: "{{ route('field.get_by_category') }}?cat_id=" + $(this).val(),
+                url: "/field/get_by_category?cat_id=" + $(this).val(),
                 method: 'GET',
                 success: function(data) {
                     $('.itemForm').html(data.html);
