@@ -41,7 +41,7 @@
             @else
                     <a  class="red-tooltip" href="#mailgo" data-address="bryan" data-domain="bjbassett.org" data-placement="bottom" data-toggle="tooltip" data-original-title="email"><i class="fa fa-envelope"></i></a> - <a data-placement="bottom" data-toggle="tooltip" data-original-title="call"  class="mailgo red-tooltip"   data-tel="2168028141"><i class="fa fa-phone"></i></a> -
 
-                    <a  class="mailgo red-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="print" class="pdfprint" href="/pdf" aria-label="Print" >
+                    <a   data-placement="bottom" data-toggle="tooltip" data-original-title="print" class="pdfprint red-tooltip" href="/pdf" aria-label="Print" >
                         <i class="fa fa-print"></i>
                     </a>
             @endif
