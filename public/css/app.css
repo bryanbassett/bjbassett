@@ -11345,10 +11345,6 @@ h3.field-group {
   display: block !important;
 }
 
-.pdfnobg {
-  background-color: white !important;
-}
-
 .badge.badge-light {
   display: inline-block;
   background-color: #e8e8e8;
@@ -11385,12 +11381,8 @@ p.lead.top-title {
 
 .topper {
   display: block;
-  background-image: url(/images/bjb.svg?d2c6ba511930b0fd964977a6a123982d);
   min-height: 260px;
-  background-repeat: no-repeat;
-  background-position: left;
   text-align: left;
-  background-size: contain;
 }
 
 .jumbotron {
@@ -11453,10 +11445,49 @@ div.bottombarrel p.text-center {
   font-style: italic;
 }
 
-.tooltip-arrow,
-.red-tooltip + .tooltip > .tooltip-inner {
-  background-color: white;
+body {
+  background-color: black;
+}
+
+body path.cls-1 {
+  fill: white;
+}
+
+body * {
+  color: white;
+  border-bottom-color: white;
+}
+
+body .jumbotron {
+  border-bottom-color: white;
+}
+
+body h3.field-group {
+  border-bottom: 1px solid white;
+}
+
+body div.bottombarrel p.text-center {
   color: black;
-  border-bottom: 1px solid #949494;
+}
+
+body.pdfnobg {
+  background-color: white !important;
+}
+
+body.pdfnobg path.cls-1 {
+  fill: black;
+}
+
+body.pdfnobg h3.field-group {
+  border-bottom: 1px solid black;
+}
+
+body.pdfnobg * {
+  color: black;
+  border-bottom-color: black;
+}
+
+body.pdfnobg .jumbotron {
+  border-bottom-color: black;
 }
 

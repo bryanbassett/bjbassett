@@ -15,6 +15,7 @@ body {
     overflow-x: hidden;
     font-size:1rem;
 }
+
 .sec-1,.sec-2,.sec-3{
     h1,h2,h3,h4,h5,h6{
         font-family:$primary-font;
@@ -178,9 +179,7 @@ h3.field-group{
 
 
 .nav-item.dropdown.open  .dropdown-menu {display: block !important;}
-.pdfnobg{
-    background-color:white !important;
-}
+
 
 .badge.badge-light{
     display:inline-block;
@@ -213,13 +212,13 @@ p.lead.top-title {
 }
 .topper{
     display:block;
-    background-image: url('../images/bjb.svg');
+
     min-height: 260px;
-    background-repeat: no-repeat;
-    background-position: left;
+
     text-align:left;
-    background-size: contain;
+
 }
+
 .jumbotron{
     padding: 0;
     border: 0px solid white;
@@ -275,6 +274,40 @@ div.bottombarrel p.text-center {
     font-family: $primary-font;
     font-style: italic;
 }
+body{
+    background-color:black;
+    path.cls-1 {
+        fill: white;
+    }
+    *{
+        color:white;
+        border-bottom-color:white;
+    }
+    .jumbotron{
+        border-bottom-color:white;
+    }
+    h3.field-group {
+        border-bottom: 1px solid white;
+    }
+    div.bottombarrel p.text-center{
+        color:black;
+    }
+    &.pdfnobg{
+        path.cls-1 {
+            fill: black;
+        }
+        h3.field-group {
+            border-bottom: 1px solid black;
+        }
+        background-color:white !important;
+        *{
+            color:black;
+            border-bottom-color:black;
+        }
+        .jumbotron{
+            border-bottom-color:black;
+        }
+    }
 
-.tooltip-arrow,
-.red-tooltip + .tooltip > .tooltip-inner {background-color: white; color:black; border-bottom: 1px solid #949494;}
+}
+
