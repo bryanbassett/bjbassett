@@ -77,5 +77,17 @@ $(function(ready){
             });
         });
     }
+    if ($('#visibility').length) {
+        $("#visibility").change(function(){
+            $.ajax({
+                url: "{{ route('settings.toggle_setting') }}?setting_id=" + $(this).val(),
+                method: 'GET',
+                success: function(data) {
+                    location.reload();
+                }
+            });
+        });
+    }
+
 
 });

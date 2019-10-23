@@ -13,17 +13,5 @@
 </div>
 
 @section('scripts')
-    <script type="text/javascript">
-        $(function(ready){
-            $("#visibility").change(function(){
-                $.ajax({
-                    url: "{{ route('settings.toggle_setting') }}?setting_id=" + $(this).val(),
-                    method: 'GET',
-                    success: function(data) {
-                        location.reload();
-                    }
-                });
-            });
-        });
-    </script>
+
 @endsection
