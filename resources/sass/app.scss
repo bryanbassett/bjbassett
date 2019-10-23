@@ -185,6 +185,9 @@ h3.field-group{
         content: "\A";
         white-space: pre;
     }
+
+}
+.sec-3{
     span.pname:after {
         content: "\A";
         white-space: pre;
@@ -195,6 +198,9 @@ h3.field-group{
     }
     span.pname {
         font-weight:bold;
+    }
+    a.plink{
+        text-decoration:underline;
     }
 }
 .mailgo:hover{
