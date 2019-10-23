@@ -64,3 +64,18 @@ $(".menu-toggle").click(function(e) {
     $("#wrapper").toggleClass("toggled");
 });
 
+$(function(ready){
+    if ($('#category').length) {
+        $("#category").change(function(){
+            $('.itemForm').html('');
+            $.ajax({
+                url: "{{ route('field.get_by_category') }}?cat_id=" + $(this).val(),
+                method: 'GET',
+                success: function(data) {
+                    $('.itemForm').html(data.html);
+                }
+            });
+        });
+    }
+
+});

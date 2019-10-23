@@ -66,19 +66,5 @@
 @endsection
 
 @section('scripts')
-    <script type="text/javascript">
-        $=jQuery;
-        $(function(ready){
-            $("#category").change(function(){
-                $('.itemForm').html('');
-                $.ajax({
-                    url: "{{ route('field.get_by_category') }}?cat_id=" + $(this).val(),
-                    method: 'GET',
-                    success: function(data) {
-                        $('.itemForm').html(data.html);
-                    }
-                });
-            });
-        });
-    </script>
+
 @endsection
