@@ -50,6 +50,9 @@ var app = new Vue({
         this.test();
     },
 });
+$(window).on('load', function () {
+    $('a').tooltip();
+});
 
 
 $("#menu-toggle").click(function(e) {

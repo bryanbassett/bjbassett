@@ -39,7 +39,11 @@
             @if(request()->get('pdf') == true)
                     <a href="#mailgo" data-address="bryan" data-domain="bjbassett.org">bryan@bjbassett.org</a> - <a class="mailgo" data-tel="2168028141">216.802.8141</a>
             @else
-                    <a href="#mailgo" data-address="bryan" data-domain="bjbassett.org">email</a> - <a class="mailgo" data-tel="2168028141">phone</a>
+                    <a  class="red-tooltip" href="#mailgo" data-address="bryan" data-domain="bjbassett.org" data-placement="bottom" data-toggle="tooltip" data-original-title="email"><i class="fa fa-envelope"></i></a> - <a data-placement="bottom" data-toggle="tooltip" data-original-title="call"  class="mailgo red-tooltip"   data-tel="2168028141"><i class="fa fa-phone"></i></a> -
+
+                    <a  class="mailgo red-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="print" class="pdfprint" href="/pdf" aria-label="Print" >
+                        <i class="fa fa-print"></i>
+                    </a>
             @endif
 
             </p>
@@ -65,7 +69,6 @@
 
                                             @foreach($ItemX->deCode($item->fullContent) as $it_id => $item2)
                                                 <items :item-identity="{{$item->id}}" ref="item-{{$item->id}}"  :items-data="{{ json_encode($ItemX->figureIt($it_id,$item2)) }} "></items>
-
                                             @endforeach
                                                 <div style="clear:both"></div>
                                                 @auth
@@ -251,7 +254,8 @@
 
         </div>
     @endif
-        <div class="bottombarrel"><span class="text-center">Resume/resumeCMS created by Bryan James Bassett using Laravel & VueJS</span></div>
+        <div class="bottombarrel"><p class="text-center">Resume/resumeCMS created by Bryan James Bassett using Laravel & VueJS</p></div>
+
   <div class="modal " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
           <modalpopper ref="mp"></modalpopper>

@@ -37,7 +37,11 @@
             <?php if(request()->get('pdf') == true): ?>
                     <a href="#mailgo" data-address="bryan" data-domain="bjbassett.org">bryan@bjbassett.org</a> - <a class="mailgo" data-tel="2168028141">216.802.8141</a>
             <?php else: ?>
-                    <a href="#mailgo" data-address="bryan" data-domain="bjbassett.org">email</a> - <a class="mailgo" data-tel="2168028141">phone</a>
+                    <a  class="red-tooltip" href="#mailgo" data-address="bryan" data-domain="bjbassett.org" data-placement="bottom" data-toggle="tooltip" data-original-title="email"><i class="fa fa-envelope"></i></a> - <a data-placement="bottom" data-toggle="tooltip" data-original-title="call"  class="mailgo red-tooltip"   data-tel="2168028141"><i class="fa fa-phone"></i></a> -
+
+                    <a  class="mailgo red-tooltip" data-placement="bottom" data-toggle="tooltip" data-original-title="print" class="pdfprint" href="/pdf" aria-label="Print" >
+                        <i class="fa fa-print"></i>
+                    </a>
             <?php endif; ?>
 
             </p>
@@ -64,7 +68,6 @@
 
                                             <?php $__currentLoopData = $ItemX->deCode($item->fullContent); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $it_id => $item2): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                 <items :item-identity="<?php echo e($item->id); ?>" ref="item-<?php echo e($item->id); ?>"  :items-data="<?php echo e(json_encode($ItemX->figureIt($it_id,$item2))); ?> "></items>
-
                                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                                 <div style="clear:both"></div>
                                                 <?php if(auth()->guard()->check()): ?>
@@ -120,7 +123,7 @@
                 </div>
             </div>
             <div class="row second-row">
-                <div class="col-xs-12 col-sm-4   sec-2">
+                <div class="col-xs-12 col-sm-5   sec-2">
                     <?php $__currentLoopData = $section2; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sec2): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <?php if($sec2->noParent()): ?>
                             <div class="field-group">
@@ -187,7 +190,7 @@
                         <?php endif; ?>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </div>
-                <div class="col-xs-12 col-sm-8 sec-3">
+                <div class="col-xs-12 col-sm-7 sec-3">
                     <?php $__currentLoopData = $section3; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sec3): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                         <?php if( $sec3->noParent()): ?>
                             <div class="field-group">
@@ -258,7 +261,8 @@
 
         </div>
     <?php endif; ?>
-        <div class="bottombarrel"><span class="text-center">Resume/resumeCMS created by Bryan James Bassett using Laravel & VueJS</span></div>
+        <div class="bottombarrel"><p class="text-center">Resume/resumeCMS created by Bryan James Bassett using Laravel & VueJS</p></div>
+
   <div class="modal " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
           <modalpopper ref="mp"></modalpopper>
