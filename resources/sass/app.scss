@@ -275,7 +275,13 @@ div.bottombarrel p.text-center {
     font-style: italic;
 }
 body{
-    background-color:black;
+    background-color:black !important;
+    .mailgo-modal .mailgo-modal-content{
+        background-color:black;
+        a{
+            color: #c3c3c3;
+        }
+    }
     path.cls-1 {
         fill: white;
     }
@@ -292,6 +298,23 @@ body{
     div.bottombarrel p.text-center{
         color:black;
     }
+    #sidebar-wrapper{
+             *{
+                 color:black;
+             }
+         }
+    #exampleModal{
+        *{
+            color:black;
+        }
+    }
+
+    .card{
+        *{
+            color:black;
+        }
+    }
+
     &.pdfnobg{
         path.cls-1 {
             fill: black;
