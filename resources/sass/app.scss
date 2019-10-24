@@ -96,7 +96,7 @@ body {
 }
 
 div.field-group{
-    margin-bottom: 5px;
+    margin-bottom: 11px;
 }
 h3.field-group{
     border-bottom:1px solid black;
@@ -390,7 +390,9 @@ body{
     }
 
 }
-
+body:not(.pdfnobg){
+    margin-bottom:40px;
+}
 
 
 svg {
