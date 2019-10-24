@@ -255,7 +255,7 @@
 
         </div>
     @endif
-        <div class="bottombarrel"><p class="text-center">Resume/resumeCMS created by Bryan James Bassett using Laravel & VueJS</p></div>
+        <div class="bottombarrel"><a href="https://bjbassett.org/s/this" class="text-center">Resume/resumeCMS created by Bryan James Bassett using Laravel & VueJS</a></div>
 
   <div class="modal " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
