@@ -224,6 +224,8 @@ h3.field-group{
         display:block;
         word-wrap:break-word;
         word-break:break-all;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
         hyphens: auto;
     }
 
