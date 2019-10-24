@@ -38,7 +38,7 @@
             <p class="lead ">
 
             @if(request()->get('pdf') == true)
-                    <a href="#mailgo" data-address="bryan" data-domain="bjbassett.org">bryan@bjbassett.org</a> - <a class="mailgo" data-tel="2168028141">216.802.8141</a>
+                    <a href="#mailgo" aria-label="Email" data-address="bryan" data-domain="bjbassett.org">bryan@bjbassett.org</a> - <a aria-label="Phone" class="mailgo" data-tel="2168028141">216.802.8141</a>
             @else
                     <a  class="red-tooltip" href="#mailgo" data-address="bryan" data-domain="bjbassett.org" data-placement="bottom" data-toggle="tooltip" data-original-title="email"><i class="fa fa-envelope"></i></a> - <a data-placement="bottom" data-toggle="tooltip" data-original-title="call"  class="mailgo red-tooltip"   data-tel="2168028141"><i class="fa fa-phone"></i></a> -
                     <a   data-placement="bottom" data-toggle="tooltip" data-original-title="twitter" class="pdfprint red-tooltip" href="https://bjbassett.org/s/twitter" aria-label="Tweet" >
