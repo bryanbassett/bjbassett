@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" prefix="og: http://ogp.me/ns#">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +9,7 @@
         <meta name="description" content="I make websites for a living using Laravel, Drupal, & WordPress.">
         <link rel="canonical" href="https://bjbassett.org">
         <meta name="robots" content="index,follow">
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Bryan James Bassett">
         <meta name="twitter:description" content="The resume/portfolio of Full-Stack Developer, Bryan James Bassett">
         <meta name="twitter:image" content="https://bjbassett.org/images/bjbfsd.jpg">
