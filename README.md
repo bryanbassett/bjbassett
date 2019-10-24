@@ -8,7 +8,7 @@
 <p align="center">
   A personal project to make my life easier, and have fun with Laravel & VueJS.
   <br>
- <strong>Included components:</strong>
+ <strong>Included components:</strong>  <br>  
   <span>Laravel</span>
   ·
   <span>VueJS</span>
@@ -23,7 +23,7 @@
 
 ## Phase 1: A resume CMS  [done]
 
-Creates frist - a responsive resume website, that when pressing "print" turns the website into a PDF automatically. Your resume will always be up to date, and easy to update. The back end includes the ability to generate shortlinks to be used on your resume/portfolio, letting you know when users clicked through links on your resume.
+Creates a responsive resume website, that when pressing "print" turns the website into a PDF automatically. Your resume will always be up to date, and easy to update. The back end includes the ability to generate shortlinks to be used on your resume/portfolio, letting you know when users clicked through links on your resume.
 
 
 ## Phase 2: A back end invoicing home base
