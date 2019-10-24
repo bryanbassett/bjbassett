@@ -47,7 +47,7 @@
                     <a   data-placement="bottom" data-toggle="tooltip" data-original-title="linkedin" class="pdfprint red-tooltip" href="https://bjbassett.org/s/in" aria-label="LinkedIn" >
                         <i class="fa fa-linkedin"></i>
                     </a> -
-                    <a   data-placement="bottom" data-toggle="tooltip" data-original-title="print" class="pdfprint red-tooltip" href="/pdf" aria-label="Print" >
+                    <a   data-placement="bottom" data-toggle="tooltip" data-original-title="generate printable resume" class="pdfprint red-tooltip" href="/pdf" aria-label="Print" >
                         <i class="fa fa-print"></i>
                     </a>
             @endif
